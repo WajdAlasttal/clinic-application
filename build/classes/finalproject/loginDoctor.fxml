@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.LoginDoctorController">
+   <children>
+      <HBox layoutX="1.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #98FB98;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="235.0" style="-fx-background-color: #FFAF42;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/doctor%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="421.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="281.0" style="-fx-font-weight: bold; -fx-font-size: 27; -fx-text-fill: white;" text="Login" />
+                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="4.0" prefWidth="184.0" style="-fx-text-fill: red;" />
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="393.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: white;" text="Doctor id ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idtxtfield" prefHeight="25.0" prefWidth="186.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="393.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold; -fx-text-fill: white;" text="Password ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passtxtfield" prefHeight="25.0" prefWidth="183.0" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#loginbtnHandler" prefHeight="35.0" prefWidth="266.0" style="-fx-background-color: white; -fx-text-fill: #FFAF42; -fx-font-weight: bold;" text="Login">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

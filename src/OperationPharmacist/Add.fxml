@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OperationPharmacist.AddController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="465.0" prefWidth="664.0" style="-fx-background-color: #e1ebfc;">
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #23395d;">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/medicine.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="49.0" prefWidth="377.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 20;" text="Add Medicine" />
+                  <Button fx:id="ButtonBack" alignment="CENTER" mnemonicParsing="false" onAction="#ButtonBackHandel" prefHeight="40.0" prefWidth="95.0" style="-fx-background-color: white; -fx-text-fill: #FFAF42; -fx-font-weight: bold; -fx-font-size: 20;" stylesheets="@Styles.css" text="Back" textFill="#401927">
+                     <font>
+                        <Font name="Bell MT Bold" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="299.0" prefWidth="646.0" spacing="10.0">
+               <children>
+                  <GridPane alignment="CENTER" hgap="25.0" prefHeight="291.0" prefWidth="385.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="54.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="306.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="ID" />
+                        <TextField fx:id="textfieldID" stylesheets="@Style.css" GridPane.columnIndex="1" />
+                        <Label style="-fx-font-weight: bold;" text="Name" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Slider fx:id="sliderDose" blockIncrement="3.0" majorTickUnit="1.0" max="10.0" min="1.0" prefHeight="72.0" prefWidth="313.0" showTickLabels="true" showTickMarks="true" value="2.0" />
+                           </children>
+                        </HBox>
+                        <Label style="-fx-font-weight: bold;" text="Quantity" GridPane.rowIndex="2" />
+                        <TextField fx:id="textfieldName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-weight: bold;" text="Dose" GridPane.rowIndex="3" />
+                        <Slider fx:id="sliderQuantity" blockIncrement="3.0" majorTickUnit="10.0" minorTickCount="5" prefHeight="72.0" prefWidth="313.0" showTickLabels="true" showTickMarks="true" value="2.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="91.0" prefWidth="664.0">
+               <children>
+                  <Button fx:id="ButtonAdd" alignment="CENTER" mnemonicParsing="false" onAction="#ButtonAddHandel" prefHeight="40.0" prefWidth="95.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-text-fill: #FFAF42;" stylesheets="@Styles.css" text="Add" textFill="#401927">
+                     <font>
+                        <Font name="Bell MT Bold" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Label fx:id="successLabel" alignment="CENTER" prefHeight="17.0" prefWidth="197.0" style="-fx-text-fill: red;" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

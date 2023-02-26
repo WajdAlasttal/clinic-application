@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OperationDoctor.UpdateController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="465.0" prefWidth="679.0" spacing="10.0" style="-fx-background-color: #e1ebfc;">
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #23395d;">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/refresh.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="57.0" prefWidth="449.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 20;" text="Update Patient" />
+                  <Button fx:id="ButtonBack" alignment="CENTER" mnemonicParsing="false" onAction="#ButtonBackHandel" prefHeight="48.0" prefWidth="103.0" style="-fx-background-color: white; -fx-text-fill: #FFAF42; -fx-font-weight: bold; -fx-font-size: 14;" stylesheets="@Styles.css" text="Back" textFill="#401927">
+                     <font>
+                        <Font name="Bell MT Bold" size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="299.0" prefWidth="646.0" spacing="10.0">
+               <children>
+                  <GridPane alignment="CENTER" hgap="25.0" prefHeight="287.0" prefWidth="357.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="61.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.0" minWidth="10.0" prefWidth="153.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="ID" textAlignment="CENTER">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label style="-fx-font-weight: bold;" text="Name" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="73.0" style="-fx-font-weight: bold;" text="Doctor ID" GridPane.rowIndex="7" />
+                        <Label style="-fx-font-weight: bold;" text="Gender" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="227.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <RadioButton fx:id="radioButtonMaleID" mnemonicParsing="false" prefHeight="30.0" prefWidth="93.0" style="-fx-font-weight: bold;" text="Male" />
+                              <RadioButton fx:id="radioButtonFemaleiD" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Female" />
+                           </children>
+                        </HBox>
+                        <Label style="-fx-font-weight: bold;" text="Age" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="textfieldAge" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-weight: bold;" text="Image" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="textfieldImage" onAction="#getFromFile" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-weight: bold;" text="Problem" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="textfieldProblem" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label style="-fx-font-weight: bold;" text="Date" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <DatePicker fx:id="datePickerDate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <ComboBox fx:id="comboBoxDoctorID" prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="textfieldName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="textfieldID" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableView" prefHeight="287.0" prefWidth="525.0">
+                    <columns>
+                      <TableColumn fx:id="tcID" prefWidth="29.0" text="ID" />
+                      <TableColumn fx:id="tcName" prefWidth="62.0" text="Name" />
+                        <TableColumn fx:id="tcAge" prefWidth="35.0" text="Age" />
+                        <TableColumn fx:id="tcGender" prefWidth="46.0" text="Gender" />
+                        <TableColumn fx:id="tcImage" prefWidth="55.0" text="Image" />
+                        <TableColumn fx:id="tcProblem" prefWidth="59.0" text="Problem" />
+                        <TableColumn fx:id="tcDate" prefWidth="68.0" text="Date" />
+                        <TableColumn fx:id="tcDoctorID" prefWidth="60.0" text="Doctor ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="102.0" prefWidth="664.0">
+               <children>
+                  <Button fx:id="ButtonUpdate" alignment="CENTER" mnemonicParsing="false" onAction="#ButtonUpdateHandel" prefHeight="48.0" prefWidth="103.0" style="-fx-background-color: white; -fx-font-weight: bold; -fx-text-fill: #FFAF42; -fx-font-size: 14;" text="Update" textAlignment="CENTER">
+                     <font>
+                        <Font name="Bell MT Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="successLabel" alignment="CENTER" prefHeight="17.0" prefWidth="197.0" style="-fx-text-fill: red;" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
